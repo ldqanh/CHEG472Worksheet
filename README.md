@@ -8,8 +8,28 @@ Description:
 This second notebook builds on the basics and dives deeper into data preprocessing and feature engineering. It introduces techniques for handling missing values, data transformation, and encoding categorical variables. Additional EDA steps provide a deeper understanding of the data and prepare it for more advanced model training tasks.
 
 Week 3
-Description:
-This Python script contains code for training and evaluating machine learning models. Here, you’ll see implementations of supervised learning models such as linear regression, decision trees, or support vector machines. The script focuses on the machine learning workflow, including data splitting, model training, and performance evaluation with metrics like accuracy, precision, and recall.
+This Python script processes and analyzes a dataset containing chemical composition and related parameters. It focuses on identifying and handling outliers, generating summary statistics, and visualizing data distributions. Key Steps:
+- Z-score Calculation:
+   - Computes Z-scores for mole fractions of CO, H2, and CO2 to identify potential outliers.
+- Outlier Detection:
+   - Outliers are identified based on Z-scores exceeding ±3.
+   - The script drops identified outliers from the dataset.
+- Outlier Handling:
+   - Capping: Values exceeding a defined threshold (0.5) for mole fractions are capped.
+   - Imputation: Missing values resulting from capping are replaced with the mean of their respective columns.
+- Summary Statistics:
+   - Calculates summary statistics (mean, count, min, max, etc.) for C/H and O/H ratios, as well as temperature statistics, grouped by feed type.
+- Visualization:
+   - Generates box plots and histograms for:
+      - Temperature
+      - Carbon content
+      - Hydrogen selectivity
+      - CO and H2 mole fractions
+      - CO2 mole fraction
+   - Analyzes distributions and trends to identify relationships in the data.
+- Target and Feature Selection:
+   - Defines target variables related to mole fractions and hydrogen selectivity.
+   - Separates features for model training by excluding non-relevant columns.
 
 Week 4
 Description:
