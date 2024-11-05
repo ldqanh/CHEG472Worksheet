@@ -100,4 +100,17 @@ Load your dataset into a Pandas DataFrame named `data`, and run the `train_evalu
 
 This script serves as a comprehensive framework for preprocessing data, training multiple regression models, and evaluating their performance, providing a solid foundation for predictive analytics tasks in chemical engineering contexts.
 
-
+Week 6
+- Data Preparation:
+   - Dropped the target variable and encoded categorical features using OneHotEncoder.
+   - Split the dataset into training and test sets.
+- Model Training:
+   - Trained multiple regression models, including Linear Regression, Lasso, and various ensemble methods (Random Forest, Gradient Boosting, etc.).
+   - Evaluated each model's performance using metrics like Mean Squared Error (MSE), R² score, and Mean Absolute Error (MAE).
+   - Implemented scaling of features and applied a pipeline for preprocessing.
+- Feature Engineering:
+   - Created polynomial features and used transformations (log, square root) to enhance model performance.
+   - Visualized correlations among features using hierarchical clustering and correlation matrices.
+- Model Stacking:
+   - Built a stacking regressor that combines predictions from multiple base models (Linear Regression, XGBoost, Gradient Boosting) using Gradient Boosting as the final estimator.
+   - Saved the best model using joblib for future predictions.
