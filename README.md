@@ -32,8 +32,32 @@ This Python script processes and analyzes a dataset containing chemical composit
    - Separates features for model training by excluding non-relevant columns.
 
 Week 4
-Description:
-This advanced Python script includes a more complex machine learning project, likely involving multiple models and techniques such as hyperparameter tuning or model ensembling. It might also implement cross-validation and feature scaling, aiming for higher performance in predictive accuracy. This script represents a culmination of the methods learned, combining them into a more refined and optimized model.
+This script performs exploratory data analysis (EDA) on a dataset concerning various chemical components, focusing on data cleaning, outlier detection, correlation analysis, and visualization techniques. Key Steps:
+- Data Loading and Initial Exploration: The dataset is loaded from an Excel file.
+   - Displays the first few rows, the dataset's columns, and checks the data types to identify numeric columns.
+   - Checks for missing data, confirming that there are no missing values.
+- Box Plot Analysis:
+   - Box plots for each numeric column (C, H, N, O, S, VM) are generated to visually assess the presence of outliers. Initial analysis shows no outliers in the C (%) column.
+- Outlier Detection Using IQR:
+   - The Interquartile Range (IQR) method is applied to identify and filter out outliers across all numeric columns.
+   - A box plot is created to visualize the remaining data without outliers.
+- Descriptive Statistics:
+   - Summary statistics are calculated for the data without outliers, including mean, median, standard deviation, minimum, maximum, and IQR, highlighting key characteristics of the dataset.
+- Data Encoding:
+   - Categorical variables are identified and transformed using one-hot encoding to facilitate further analysis.
+   - Checks for duplicate columns in the encoded data, confirming none are present.
+- Correlation Analysis:
+   - A correlation matrix is computed for the numeric columns in the dataset without outliers.
+   - A heatmap visualization of the correlation matrix is generated, revealing significant relationships, such as a strong positive correlation between Ash (%) and N (%) and a perfect correlation between Cellulose (Cel) and Hemicellulose (Hem).
+- Visualization of Relationships:
+   - Scatter plots and count plots are created for specific relationships and categorical variables (e.g., C (%) vs. H (%), counts by Location).
+   - Pair plots for multiple numeric variables are generated to visualize relationships among them.
+- Principal Component Analysis (PCA):
+   - PCA is applied to the scaled numeric data to reduce multicollinearity and retain significant variance.
+   - The explained variance of each principal component is evaluated, and the optimal number of components is determined to retain 95% cumulative variance.
+- Final Insights:
+   - The analysis concludes that while C and O exhibit strong correlations, the correlation between MSP and other variables is minimal.
+   - Outliers have been effectively addressed by removing affected data points, allowing for a clearer understanding of the dataset's structure.
 
 Week 5:
 # Feature Selection and Model Training Script
